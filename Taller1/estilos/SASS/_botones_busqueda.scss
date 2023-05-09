@@ -1,0 +1,52 @@
+@import 'variables';
+@import 'keyframes';
+
+
+
+@mixin botones($valor1,$valor2){
+    width: $valor2;
+    height: $valor1;
+    margin: 0.5rem;
+    //background-size: $valor1 - 10rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    //background-size: $valor -10rem;
+}
+
+.busqueda{ 
+//    width: 20rem;
+//    height: 20rem;  
+//    margin: 0.5rem;
+//    background-repeat: no-repeat;
+//    background-position: center;
+    @include botones(20rem,20rem);
+    background-size: 10rem;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+.opcion{
+    margin: 0;
+    color: white;
+    font-family: $fuente;
+    font-size: 4rem;
+}
+
+#b1{
+    background-image: url('../../images/group.png');
+}
+#b2{
+    background-image: url('../../images/individuo.png');
+}
+#b3{
+    @include botones(4rem,6rem);
+    color: white;
+    background-size: 1.7rem;
+    background-image: url('../../images/message.png');
+    transition: width, 0.7s;
+    .opcion{
+        font-size: 1rem;
+    }
+    &:hover{
+        width: 4rem;
+    }
+}

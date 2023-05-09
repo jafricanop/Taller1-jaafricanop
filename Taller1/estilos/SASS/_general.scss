@@ -1,0 +1,166 @@
+@import 'variables';
+@import 'keyframes';
+@import 'mixins';
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: $color_bbck;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    header{
+        width: 100%;
+        font-family: $fuente;
+        background-color: $color_bck;
+        color: $color_txt;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.5);
+        
+        h1{
+            margin: 0px 0px 0px 1rem;
+            padding: 1.5rem;
+            a{
+                margin-left: 0.5rem;
+                color: $color_txt;
+                text-decoration: none;
+                font-size: 3rem;
+                transition: transform 3s;
+                transform: rotate(360deg);
+            }
+        }
+        nav{
+            
+            margin-right: 1.5rem;
+            ul{
+                padding: 0px;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                li{
+                    display: flex;
+                    margin: 0.8rem;
+                    a{
+                        color: $color_txt;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        transition: transform 0.3s;
+                        &:hover{
+                            transform: translateY(-7px);
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div{
+        font-family: $fuente;
+        width: 100%;
+        box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.5);
+        nav{
+            margin: 0px;
+            padding: 0px;
+            ul{
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                li{
+                    width: 100%;
+                    button{
+                        font-family: $fuente;
+                        color: $color_txt;
+                        text-decoration: none;
+                        font-size: 1.7rem;
+                        width: 100%;
+                        background-color: rgba(36, 36, 36, 0.9);
+                        border: 0;
+                        padding-top: 0.5rem;
+                        padding-bottom: 0.5rem;
+                        transition: background-color , color, 0.6s , 0.6s ;
+                        &:hover{
+                            background-color: $color_txt;
+                            color: rgba(36, 36, 36, 0.9);;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    main{
+        background-color: white;
+        padding: 3rem;
+        margin: 2rem 10rem 2rem 15rem;
+        font-size: 1.4rem;
+        box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.521);
+        text-align: center;
+        border-radius: 0.5rem;
+        animation: fade-in 1s ease-in-out;
+        p{
+            font-family: 'Courier New', Courier, monospace;
+            //font-family: $fuente;
+        }
+        button{
+            background-color: black;
+            border: none;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 5%;
+            padding: 0;
+            cursor: pointer;
+            text-align: center;            
+            a{
+                
+                color: white;
+                margin: 0;
+                padding: 3.5rem 2.3rem 3.5rem 2.3rem;
+                text-decoration: none;
+                font-family: $fuente;
+                font-size: 2rem;
+            }
+            transition: background-color , border-radius, display, 0.5s, 0.5s, 0.5s;
+            &:hover{
+                background-color: $color_txt;
+                border-radius: 50%;
+                .opcion{
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .imgfondo{
+        z-index: -1;
+    }
+    .imgfondo2{
+        z-index: -1;
+    }
+}
+.imgfondo{
+    height: 600px;
+    position: absolute;
+    top: 140px;
+    left: 10px;
+    animation: slide-up 0.7s ease-in-out;
+}
+.imgfondo2{
+    position: absolute;
+    top: -5%;
+    left: 60%;
+    scale: 0.35;
+    animation: slide-left 0.7s ease-in-out;
+}
+#opciones{
+    display: none;
+} 
+
+

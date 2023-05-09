@@ -1,0 +1,21 @@
+@import 'variables';
+
+#text{
+    background-color: $color_bbck;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 3%;
+    border-bottom: solid 3px orange;
+    outline: none;
+    transition: background-color, border-bottom, 0.7s, 0.5s;
+    transition: box-shadow, 0.3s;
+    &:hover{
+        background-color: darken($color_bbck, 10%);
+    }
+    &:focus{
+        background-color: darken($color_bbck, 10%);
+        color: black;    
+        box-shadow: inset 3px 0 0 0 orange;
+    }
+}

@@ -1,0 +1,63 @@
+@import 'variables';
+
+.Rta{    
+    display: flex;
+    box-shadow: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: $color_bbck;
+    gap: 20px;
+    width: 95%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    input{
+        font-family: 'Courier New', Courier, monospace;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    #res{
+        text-align: center;
+        box-shadow: none;
+        h1{
+            font-size: 3rem;
+            font-family: $fuente;
+        }
+        font-family: 'Courier New', Courier, monospace;
+        h2{
+            font-family: 'Courier New', Courier, monospace;
+        }
+    }
+    table{
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.521);
+        thead{
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            border-bottom: solid 6px orange;
+            th{
+                padding: 20px;
+            }
+        }
+        
+        tr , td{
+            padding: 20px;
+            transition: background-color 0.3s;
+            &:hover td{
+                background-color: lighten($color: rgba(255, 166, 0, 0.5), $amount: 20%);
+            }
+        }
+        tr{
+            transition: box-shadow 0.3s;
+            cursor: pointer;
+            &:hover{
+                box-shadow: inset 0 -5px 0 0 orange;
+            }
+        } 
+    }   
+}
+
